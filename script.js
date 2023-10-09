@@ -19,5 +19,8 @@ voiceSelect.addEventListener('change', () => {
 
 document.querySelector('button').addEventListener('click', () => {
   speech.text = document.querySelector('textarea').value;
+  speech.rate = 1;
   window.speechSynthesis.speak(speech);
+  // window.speechSynthesis.cancel();
+  //if utterance rate > 2 use this line and then try once again
 });
